@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="entrada"></label>
+    <input type="number" name="entrada" id="entrada">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+
+            let msg = parseFloat(document.getElementById('entrada').value)      // Captura o valor do input quando o botão é clicado
+            
+            if(msg % 2 == 0 ){resultado = 'par'}
+            else{resultado = 'impar'}
+
+            
+            document.getElementById('resultado').innerText=  `o numero ${msg} é ${resultado}`   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+
+        
+    </script>
+</body>
+
+</html>

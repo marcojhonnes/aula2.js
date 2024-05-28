@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios de Javascript</title>
+</head>
+
+<body>
+    <h1>Exercícios de Javascript</h1>
+    <label for="entrada"></label>
+    <input type="text" name="entrada" id="entrada">
+    <label for="entrada"></label>
+    <input type="text" name="entrada2" id="entrada">
+    <label for="entrada"></label>
+    <input type="text" name="entrada3" id="entrada">
+    <p id="resultado"></p>
+    <button onclick="action()">Clique aqui para executar a função</button>
+
+    <script>
+        function action() {
+
+            let msg = document.getElementById('entrada').value      // Captura o valor do input quando o botão é clicado
+            let msg2 = document.getElementById('entrada2').value      // Captura o valor do input quando o botão é clicado
+            let msg3 = document.getElementById('entrada3').value      // Captura o valor do input quando o botão é clicado
+            if (msg > msg2 && msg2 > msg3) {
+                resultado = msg
+            }
+            else if(msg2 > msg3 && msg){
+                resultado = msg2
+            }
+
+            else{
+                resultado = msg3
+            }
+            document.getElementById('resultado').innerText= resultado   // Altera o elemento HTML com id correspondente adicionando o texto
+        }
+
+        
+    </script>
+</body>
+
+</html>
